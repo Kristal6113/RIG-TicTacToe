@@ -17,6 +17,7 @@ print()
 
 winner = ""
 player = "X"
+valid_moves=[1,2,3,4,5,6,7,8,9]
 used_moves=[]
 valid_play=True
 board=[[1,2,3],
@@ -32,7 +33,7 @@ print()
 while winner == "":
     if player == "X":
         move = int(input("Player X's Move: "))
-        if move in used_moves:
+        if (move in used_moves) or (move not in valid_moves):
             print()
             print("-----INVALID MOVE-----")
             print()
@@ -82,7 +83,7 @@ while winner == "":
             print()
     if player == "O":
         move = int(input("Player O's Move: "))
-        if move in used_moves:
+        if (move in used_moves) or (move not in valid_moves):
             print()
             print("-----INVALID MOVE-----")
             print()
@@ -126,25 +127,9 @@ while winner == "":
                         board[2][2]='O'
                         used_moves.append(9)
                         player="X"
-
+                        
                     print("|", board[row][col],"|", end=" ")
                 print()
             print()
     print("USED ", used_moves)
-
-            
-                    
-
-        
-
-
-
-#val = input("Player X's Move: ")
-
-#    for col in row:
-#        if col == val:
-#            board[row][col] = val
-#            print("|",col,"|", end=" ")
-#    print()
-
 print()

@@ -19,7 +19,7 @@ winner = ""
 player = "X"
 valid_moves=[1,2,3,4,5,6,7,8,9]
 used_moves=[]
-valid_play=True
+
 board=[[1,2,3],
         [4,5,6],
         [7,8,9]]
@@ -31,7 +31,7 @@ print()
 
 
 while winner == "":
-    if player == "X":
+    if player == "X" and winner=="":
         move = int(input("Player X's Move: "))
         if (move in used_moves) or (move not in valid_moves):
             print()
@@ -81,6 +81,38 @@ while winner == "":
                     print("|", board[row][col],"|", end=" ")
                 print()
             print()
+            if board[0][0]=='X' and board[0][1]=='X' and board [0][2]=='X':
+                winner = 'X'
+                print("-----WINNER: PLAYER X-----")
+                break
+            if board[1][0]=='X' and board[1][1]=='X' and board [1][2]=='X':
+                winner = 'X'
+                print("-----WINNER: PLAYER X-----")
+                break
+            if board[2][0]=='X' and board[2][1]=='X' and board [2][2]=='X':
+                winner = 'X'
+                print("-----WINNER: PLAYER X-----")
+                break
+            if board[0][0]=='X' and board[1][0]=='X' and board [2][0]=='X':
+                winner = 'X'
+                print("-----WINNER: PLAYER X-----")
+                break
+            if board[0][1]=='X' and board[1][1]=='X' and board [2][1]=='X':
+                winner = 'X'
+                print("-----WINNER: PLAYER X-----")
+                break
+            if board[0][2]=='X' and board[1][2]=='X' and board [2][2]=='X':
+                winner = 'X'
+                print("-----WINNER: PLAYER X-----")
+                break
+            if board[0][0]=='X' and board[1][1]=='X' and board [2][2]=='X':
+                winner = 'X'
+                print("-----WINNER: PLAYER X-----")
+                break
+            if board[0][2]=='X' and board[1][1]=='X' and board [2][0]=='X':
+                winner = 'X'
+                print("-----WINNER: PLAYER X-----")
+                break
     if player == "O":
         move = int(input("Player O's Move: "))
         if (move in used_moves) or (move not in valid_moves):
@@ -131,5 +163,37 @@ while winner == "":
                     print("|", board[row][col],"|", end=" ")
                 print()
             print()
-    print("USED ", used_moves)
+            if board[0][0]=='O' and board[0][1]=='O' and board [0][2]=='O':
+                winner = 'O'
+                print("-----WINNER: PLAYER O-----")
+                break
+            if board[1][0]=='O' and board[1][1]=='O' and board [1][2]=='O':
+                winner = 'O'
+                print("-----WINNER: PLAYER O-----")
+                break
+            if board[2][0]=='O' and board[2][1]=='O' and board [2][2]=='O':
+                winner = 'O'
+                print("-----WINNER: PLAYER X-----")
+                break
+            if board[0][0]=='O' and board[1][0]=='O' and board [2][0]=='O':
+                winner = 'O'
+                print("-----WINNER: PLAYER O-----")
+                break
+            if board[0][1]=='O' and board[1][1]=='O' and board [2][1]=='O':
+                winner = 'O'
+                print("-----WINNER: PLAYER O-----")
+                break
+            if board[0][2]=='O' and board[1][2]=='O' and board [2][2]=='O':
+                winner = 'O'
+                print("-----WINNER: PLAYER O-----")
+                break
+            if board[0][0]=='O' and board[1][1]=='O' and board [2][2]=='O':
+                winner = 'O'
+                print("-----WINNER: PLAYER O-----")
+                break
+            if board[0][2]=='O' and board[1][1]=='O' and board [2][0]=='O':
+                winner = 'O'
+                print("-----WINNER: PLAYER O-----")
+                break
+    print()
 print()
